@@ -25,11 +25,13 @@ LISTA   "lista"
 
 PR {INICIA}|{CREA}|{ABRE}|{INGRESA}|{LISTA}
 
+/*yytext es un array con la cadena de entrada podemos acceder atraves de indices*/
+
 %%
 [\t ]+
 {PR}            {printf("\nPalabra reservada: %s", yytext);}
 
-{NOMBRE}        {printf("\nEs un nombre: %s", yytext);} /*yytext es un array con la cadena de entrada podemos acceder atraves de indices*/
+{NOMBRE}        {printf("\nEs un nombre: %s", yytext);} 
 {DIRECCION}     {printf("\nEs una direccion: %s", yytext);}
 
 {PAR_ABRE}      {printf("\nPAR_ABRE: %s", yytext);}
